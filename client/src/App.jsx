@@ -4,19 +4,18 @@ import { useState } from 'react';
 
 function App() {
 
-  const [color, setColor] = useState("Red");
+  const [brand, setBrand] = useState("Ferrari");
+  const [model, setModel] = useState("Roma");
+  const [year, setYear] = useState("2023");
+  const [color, setColor] = useState("red");
 
-
-  const changeColor = () => {
-    
-   setColor ("Blue")
-    console.log(color);
-  }
-
+  
   return (
     <>
-    <h1>My favorite color is {color}!</h1>
-    <button onClick={changeColor}>Blue</button>
+
+    <h1>My {brand}</h1>
+    <h2>It is a {color} {model} from {year}</h2>
+    
     
     </>                                                                            
   )
