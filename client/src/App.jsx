@@ -4,17 +4,29 @@ import { useState } from 'react';
 
 function App() {
 
-  const [brand, setBrand] = useState("Ferrari");
-  const [model, setModel] = useState("Roma");
-  const [year, setYear] = useState("2023");
-  const [color, setColor] = useState("red");
+  const [car, setCar] = useState({
+    brand: "Ferrari",
+    model: "Roma",
+    year: "2023",
+    color: "red"
+  });
+
+  const changeColor = () => {
+    setCar((ovie) => {
+
+      return {...ovie, color: "Blue", year: "2002"}
+
+    })
+  }
+  
 
   
   return (
     <>
 
-    <h1>My {brand}</h1>
-    <h2>It is a {color} {model} from {year}</h2>
+    <h1>My {car.brand}</h1>
+    <h2>It is a {car.color} {car.model} from {car.year}</h2>
+    <button onClick={changeColor}>Blue</button>
     
     
     </>                                                                            
